@@ -1,0 +1,346 @@
+/* Reset and colors */
+:root {
+    --brown: #5C4033;
+    --beige: #F5F5DC;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background:url('output-onlinepngtools (5).png'), var(--brown);
+    overflow-x: hidden;
+    object-fit: cover;
+    background-position: center;
+  }
+  
+  
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--beige);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 1s ease 3s forwards;
+  }
+  
+  .loader-content {
+    text-align: center;
+    color: var(--brown);
+    padding: 0 20px;
+  }
+  
+
+  .loader p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+  
+ 
+  .main-content {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 1s ease 2s, transform 1s ease 2s;
+  }
+  
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 40px;
+    position: relative;
+    z-index: 9998;
+    background: #fdf6e3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    bottom: 200px;
+    animation: gb 1s ease-in-out 1 forwards 3s ;
+   
+}
+.hero h1{
+    font-size: 2.5rem;
+    color: #de2b2c;
+    position: relative;
+    width: max-content;
+}
+.hero h1::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: -5px;
+    background: #de2b2c;
+    transition: all 0.5s ease-in-out;
+    right: 0;
+    animation: ht 1s  3.5s 1 linear forwards ;
+}
+@keyframes ht {
+    to{
+        width: 63%;
+    }
+}
+@keyframes gb {
+ 
+    100% {
+        bottom: 0px;
+    }
+}
+a{
+    text-decoration: none
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+}
+ul li{
+    list-style: none;
+    position: relative;
+}
+li a{
+    text-decoration: none;
+    color: #de2b2c;
+    font-size: 1.1rem;
+
+}
+li a::before{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 0;
+    bottom: 0;
+    background: #de2b2c;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: -3px;
+}
+li a:hover::before {
+    width: 100%;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+.menu .line{
+    transition: all 400ms ease-in-out;
+    background-color: black;
+    width: 30px;
+    height: 2px;
+
+}
+.menu.yh .line:nth-child(1){
+    transform: translateY(10px) rotate(45deg);
+}
+.menu.yh .line:nth-child(2){
+   opacity: 0;
+}
+.menu.yh .line:nth-child(3){
+     transform: translateY(-10px) rotate(-45deg);
+}
+.active{
+     left: 0;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+.buttons button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #d2691e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.buttons button:hover{
+    background-color: #d2691e;
+}
+.toget{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.fade-letter {
+    opacity: 0;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+    font-size: 1.7rem;
+    text-align: center;
+;
+  }
+#bgv{
+    font-size: 1.7rem;
+} 
+.container{
+    padding: 6rem 0;
+}
+.hero_cont{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 60px;
+    place-items: center;
+
+}
+.hero img{
+    width: 100%;
+    height: 500px;
+  
+}
+.hero_cont .first_side{
+    display: grid;
+    gap: 1rem;
+}
+.hero #headline{
+    color:white;
+}
+
+  .about{
+    background:url('output-onlinepngtools (5).png'), #a1887f;
+    padding: 10px 0;
+    object-fit: cover;
+    background-position: center;
+  }
+  .about_cont{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 120px 60px;
+    place-items: center;
+    gap: 2rem;
+  }
+  .about_cont img{
+    border-radius: 10px;
+  }
+  .about > h1{
+    font-size: 60px;
+    margin: 20px auto;
+    position: relative;
+    width: max-content;
+-webkit-text-stroke: 1px white;
+-webkit-text-fill-color: transparent;
+color: transparent;
+text-align: center;
+  }
+  .about > h1::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #d2691e;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+  }
+  .about > h1::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background: #d2691e;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: -15px 0;
+  }
+  
+  .about_cont h1{
+    font-size: 2.5rem;
+    color: white;
+    position: relative;
+    width: max-content;
+    border: 3px solid #d2691e;
+    padding: 0 10px;
+    margin: 10px 0;
+  }
+@media (max-width:768px) {
+
+     nav ul{
+         flex-direction: column;
+         position: fixed;
+         top: 90px;
+         left: -100%;
+         width: 100%;
+         height: 100vh;
+         transition: all 0.5s ease;
+         align-items: flex-start;
+         padding: 40px 0;
+         background: #2e3436;
+         border-top: 1px solid black;
+         border-radius: 5px;
+      
+     }
+
+     li{
+         padding: 10px 20px;
+         cursor: pointer;
+         width: 100%;
+     }
+     li a{
+         color: white;
+       text-transform: uppercase;
+     }
+     li:hover{
+         background-color: rgba(255,255,255,0.4);
+     }
+     li a:hover::before {
+     width: 0;
+     }
+     nav ul{
+         gap: 1rem;
+     }
+     .hero_cont{
+         grid-template-columns: 1fr;
+         padding: 20px;
+     }
+     .hero_cont .first_side{
+        order: 2;
+     }
+     .about_cont{
+        grid-template-columns: 1fr;
+        padding:30px 20px;
+     }
+    }
+    @media (min-width:768px){
+        .menu{
+            display: none;
+        }
+   
+    }
+
+  /* Fade out loader */
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  /* After loader animation finishes */
+  body.loaded .main-content {
+    opacity: 1;
+    transform: scale(1);
+    overflow: auto;
+  }
+  

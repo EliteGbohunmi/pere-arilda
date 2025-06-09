@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -75,37 +76,69 @@
         </div>
       </div>
     </section>
+    <br>
     <hr/>
+    <br>
+    <br>
    <section class="about">
     <h1 id="headline">ABOUT ME</h1>
         <div class="about_cont container">
             <div class="about_side fir">
-                <img src="IMG-20250606-WA0032.jpg" alt="" />
+                <img src="cropped-image.png" alt="" />
                 </div>
             <div class="about_side sec_abt">
-                <h1>WHO AM I?</h1>
-            <p id="headli">
-                I am an Executive virtual support assistant designed to help you manage your
-                tasks and projects efficiently. My goal is to provide you with the
-                support you need to stay organized and focused, allowing you to
-                achieve your goals with ease.
-            </p>
-            <br>
-            <p id="headli">
-                With my advanced capabilities, I can assist you in scheduling,
-                reminders, and providing helpful tips to keep you on track. Let's
-                work together to make your life easier and more productive!
-            </p>
-            <br/>
+                <h1 class="fir">WHO AM I? </h1>
+      <p id="headli">
+        I am an Executive Virtual Support Assistant, dedicated to helping you manage your tasks, projects, and daily responsibilities with efficiency and ease. My goal is to provide you with the structure and support you need to stay organized, focused, and on top of your priorities so you can achieve your goals with confidence and peace of mind.
+<br>
+<br>
+With my advanced capabilities, I can assist you in scheduling appointments, setting timely reminders, tracking deadlines, and offering helpful productivity tips tailored to your workflow. Whether you're juggling multiple projects or just need help staying on track, I am here to streamline your day and reduce the mental load.
+<br>
+<br>
+Let us work together to simplify your processes, maximize your time, and make your personal and professional life more productive and stress fre
+      </p>
+            <br/> 
             <div class="buttons">
-                <div class="bnh"><button>Get Started</button></div>
-                <div class="bst"><button>Contact Me</button></div>
+                <div class=" n"><button>Get Started</button></div>
+                <div class=" nt"><button>Contact Me</button></div>
               </div>
             </div>
            
         </div>
+        <br>
+        <br>
+        <h1 style="text-align: center;" id="headli"> Social media handles</h1>
+        <div class="serve_cont">
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <p>Tap To See Socials</p>
+              </div>
+              <div class="card-back">
+                <p>Back Side</p>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+            </div>
+          </div>
+        </div>
    </section>
+  
+
+  <section class="services">
+<!-- From Uiverse.io by vamsidevendrakumar --> 
+
+
+  </section>
    
+
+  
+
+   
+
    
    
    
@@ -150,6 +183,20 @@
       ScrollReveal().reveal(".bnh", {
         distance: "50px",
         delay: 3700,
+        origin: "bottom",
+        duration: 800,
+        easing: "ease-in-out",
+      });
+      ScrollReveal().reveal(".n", {
+        distance: "50px",
+        delay: 1000,
+        origin: "bottom",
+        duration: 800,
+        easing: "ease-in-out",
+      });
+      ScrollReveal().reveal(".nt", {
+        distance: "50px",
+        delay: 1000,
         origin: "bottom",
         duration: 800,
         easing: "ease-in-out",
@@ -219,10 +266,9 @@
         gsap.registerPlugin(SplitText);
 
         
-        const split = new SplitText("#headlin", { type: "lines,chars" });
+        const split = new SplitText("#headlin", { type: "words" });
 
-   
-        gsap.from(split.chars, {
+        gsap.from(split.words, {
           opacity: 0,
           y: 20,
           duration: 1.2,
@@ -264,9 +310,9 @@
       ScrollTrigger.matchMedia({
         // Mobile only
         "(max-width: 768px)": function () {
-          const split = new SplitText("#headli", { type: "chars" });
+          const split = new SplitText("#headli", { type: "words" });
 
-          gsap.from(split.chars, {
+          gsap.from(split.words, {
             scrollTrigger: {
               trigger: "#headli",
               start: "top 80%",
@@ -281,10 +327,27 @@
           });
         },
 
-        // (optional) Desktop or other breakpoints
+
         "(min-width: 769px)": function () {
-          // No scroll animation here (or a different one if you want)
-        },
+
+          const split = new SplitText("#headli", { type: "words" });
+
+gsap.from(split.words, {
+  scrollTrigger: {
+    trigger: "#headli",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  opacity: 0,
+  y: 20,
+  duration:0.3,
+  ease: "power1.out",
+  stagger: 0.01,
+  delay: 0.1,
+});
+},
+
+       
       });
       gsap.registerPlugin( ScrollTrigger);
     </script>

@@ -71,33 +71,7 @@ nav {
   bottom: 200px;
   animation: gb 1s ease-in-out 1 forwards 3s;
 }
-.hero h1 {
-  font-size: 2.5rem;
-  color: #de2b2c;
-  position: relative;
-  width: max-content;
-}
-.hero h1::before {
-  content: "";
-  position: absolute;
-  height: 3px;
-  width: 0;
-  bottom: -5px;
-  background: #de2b2c;
-  transition: all 0.5s ease-in-out;
-  right: 0;
-  animation: ht 1s 3.5s 1 linear forwards;
-}
-@keyframes ht {
-  to {
-    width: 63%;
-  }
-}
-@keyframes gb {
-  100% {
-    bottom: 0px;
-  }
-}
+
 a {
   text-decoration: none;
 }
@@ -106,16 +80,16 @@ nav ul {
   align-items: center;
   gap: 2rem;
 }
-ul li {
+nav ul li {
   list-style: none;
   position: relative;
 }
-li a {
+nav ul li a {
   text-decoration: none;
   color: #de2b2c;
   font-size: 1.1rem;
 }
-li a::before {
+nav ul li a::before {
   content: "";
   position: absolute;
   display: block;
@@ -206,14 +180,43 @@ li a:hover::before {
 .hero {
   padding: 3rem 0;
   background: url("output-onlinepngtools (5).png"),
-  linear-gradient(107deg,rgba(92, 64, 51, 1) 49%, rgba(173, 55, 0, 0.3) 100%)}
+    linear-gradient(107deg, rgba(92, 64, 51, 1) 49%, rgba(173, 55, 0, 0.3) 100%);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  color: #de2b2c;
+  position: relative;
+  width: max-content;
+}
+.hero h1::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  bottom: -5px;
+  background: #de2b2c;
+  transition: all 0.5s ease-in-out;
+  right: 0;
+  animation: ht 1s 3.5s 1 linear forwards;
+}
+@keyframes ht {
+  to {
+    width: 63%;
+  }
+}
+@keyframes gb {
+  100% {
+    bottom: 0px;
+  }
+}
 .about {
   padding: 50px 0;
   object-fit: cover;
   background-position: center;
-
-  position: relative;
+  background: url("output-onlinepngtools (5).png"),
+    linear-gradient(270deg, rgba(92, 64, 51, 1) 49%, rgba(173, 55, 0, 0.3) 100%);
 }
+
 .about::before {
   content: "";
   position: absolute;
@@ -222,23 +225,23 @@ li a:hover::before {
   width: 300px;
   height: 300px;
   filter: blur(150px);
-  background:rgba(173, 55, 0, 1);
+  background: rgba(173, 55, 0, 1);
   border-radius: 50%;
 }
 .about_cont {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 20px 60px;
- 
+color: var(--beige);
   gap: 2rem;
 }
 .about_cont img {
   border-radius: 10px;
   object-fit: contain;
 }
-.about > h1 {
+.about > #headline {
   font-size: 40px;
-  margin: 20px 30px;
+  margin: 20px 90px;
   position: relative;
   width: max-content;
   height: max-content;
@@ -246,13 +249,13 @@ li a:hover::before {
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
-.about > h1::before {
+.about > #headline::before {
   content: "";
   position: absolute;
   height: 100%;
   width: 3px;
   background: #d2691e;
-  margin: -10px;
+  margin:0 -10px ;
   top: 0;
 }
 
@@ -264,13 +267,12 @@ li a:hover::before {
   padding: 0 10px;
   margin: 10px 0;
 }
- 
-/* From Uiverse.io by vamsidevendrakumar */ 
+
 .card {
-  width: 80%;
-  height: 200px;
+  width: 50%;
+  height: 320px;
   perspective: 1000px;
-cursor: pointer;
+  cursor: pointer;
 }
 .serve_cont {
   display: flex;
@@ -288,7 +290,6 @@ cursor: pointer;
 
 .card:hover .card-inner {
   transform: rotateY(180deg);
-  border: 1px solid #d2691e;
 }
 
 .card-front,
@@ -300,11 +301,11 @@ cursor: pointer;
 }
 
 .card-front {
-  background-color: #6A2C70;
+  background-color: var(--browns);
   color: #fff;
   display: flex;
   align-items: center;
-  border: 10px solid #6A2C70;
+  border: 10px solid var(--browns);
   border-radius: 10px;
   justify-content: center;
   font-size: 24px;
@@ -312,25 +313,107 @@ cursor: pointer;
 }
 
 .card-back {
-  background-color: #F08A5D;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  border: 10px solid #F08A5D;
+  background-color: var(--beige);
+  color: #000;
+  border: 10px solid #f08a5d;
   border-radius: 10px;
-  justify-content: center;
-  font-size: 24px;
+padding: 20px 0;
   transform: rotateY(180deg);
 }
 
+#nj {
+  text-align: center;
+}
+.loadtext {
+  top: 50%;
 
+  left: 50%;
 
+  transform: translate(-50%, -50%);
 
+  position: absolute;
 
+  width: max-content;
 
+  font-size: 3.2vmax;
 
+  display: flex;
 
+  text-align: center;
+
+  animation: close 1s linear 4s forwards, colorchange 1s linear 2s forwards;
+
+  margin: -40px 0;
+}
+
+.loaded-text {
+  transform: scale(1.5);
+
+  animation: reduce 0.5s linear 0.5s forwards;
+}
+
+.loader-text {
+  width: 0;
+
+  overflow: hidden;
+
+  animation: mimic 1s linear 1s forwards;
+
+  text-wrap: nowrap;
+}
+
+.bn {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 10px;
+}
+.bm {
+  width: 70px;
+  height: 70px;
+}
+.bm img {
+  border-radius: 50%;
+}
+.bv {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 30px;
+  gap: 1rem;
+  font-size: 1.2rem;
+  justify-content: center;
+}
+.bv i{
+  font-size: 1.5rem;
+  color: black;
+}
+.bv i a {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 200;
+}
+.serve_cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+ place-items:center;
+}
+.card_txt ol{
+  padding: 0 20px;
+}
 @media (max-width: 768px) {
+  .card {
+    width: 90%;
+    height:350px;
+    perspective: 1000px;
+    cursor: pointer;
+
+  }
+  .about > #headline {
+    font-size: 40px;
+    margin: 20px 30px;
+  }
   nav ul {
     flex-direction: column;
     position: fixed;
@@ -346,19 +429,19 @@ cursor: pointer;
     border-radius: 5px;
   }
 
-  li {
+  nav ul li {
     padding: 10px 20px;
     cursor: pointer;
     width: 100%;
   }
-  li a {
+  nav ul li a {
     color: white;
     text-transform: uppercase;
   }
-  li:hover {
+  nav ul li:hover {
     background-color: rgba(255, 255, 255, 0.4);
   }
-  li a:hover::before {
+  nav ul li a:hover::before {
     width: 0;
   }
   nav ul {
@@ -381,19 +464,20 @@ cursor: pointer;
       grid-template-columns: 1fr;
       height: auto;
     }
-  
+
     .angry-grid > div {
       grid-column: 1 / -1 !important;
       grid-row: auto !important;
       min-height: 150px;
     }
-  }@media (max-width: 768px) {
+  }
+  @media (max-width: 768px) {
     .angry-grid {
       grid-template-rows: auto;
       grid-template-columns: 1fr;
       height: auto;
     }
-  
+
     .angry-grid > div {
       grid-column: 1 / -1 !important;
       grid-row: auto !important;
@@ -414,9 +498,46 @@ cursor: pointer;
   }
 }
 
-
 body.loaded .main-content {
   opacity: 1;
   transform: scale(1);
   overflow: auto;
+}
+@keyframes reduce {
+  from {
+    transform: scale(1.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes mimic {
+  to {
+    width: 32vmax;
+  }
+}
+
+@keyframes close {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+
+    display: none;
+  }
+}
+
+@keyframes closes {
+  from {
+  }
+
+  to {
+    background-color: transparent;
+
+    z-index: -1;
+  }
 }

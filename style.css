@@ -241,9 +241,10 @@ li a:hover::before {
   width: max-content;
   margin: 0 auto;
   color: white;
-  font-size:1.7rem !important;
 }
-
+.certifications  .vbs{
+  font-size:3.1rem !important;
+}
 .vbs::before {
   content: "";
   position: absolute;

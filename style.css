@@ -497,7 +497,7 @@ border-bottom: 2px solid var(--brown);
   padding: 10px 0;
 }
 .card_txt ol{
-  padding: 20px 20px;
+  padding: 20px 10px;
   margin:20px 0;
   list-style: none;
 

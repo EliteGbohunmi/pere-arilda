@@ -532,8 +532,7 @@ li a:hover::before {
 
   background-position: center;
 
-  background: url("output-onlinepngtools (5).png"), url("nnnoise (1).svg"), linear-gradient(to top left, #B2A28E 30%, #856D55 70%);
-
+ 
 }
 
 
@@ -933,9 +932,6 @@ padding: 20px 0;
 }
 
 .services{
-
-  background: url("output-onlinepngtools (5).png"), url("nnnoise (1).svg"),linear-gradient(to left, #B2A28E, #856D55);
-
   padding: 50px 0;
 
 }
@@ -1272,7 +1268,7 @@ border-bottom: 2px solid var(--brown);
 
   padding: 3rem 0;
 
-  background: url("output-onlinepngtools (5).png"), #856D55
+  background: url("output-onlinepngtools (5).png"), #856D55;
 
 
 

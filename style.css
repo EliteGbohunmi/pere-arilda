@@ -341,7 +341,9 @@ li a:hover::before {
 }
 
     
-
+.hero{
+z-index:90;
+}
 .hero .container {
 
   display: flex;
@@ -414,11 +416,7 @@ li a:hover::before {
 
 }
 
-.coloredo {
 
-  color: var(--main-col);
-
-}
 
 .coloredg {
 

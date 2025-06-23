@@ -1130,13 +1130,18 @@ border-bottom: 2px solid var(--brown);
 
   display: grid;
 
-  grid-template-columns: 1fr 1fr  1fr 1fr;
+  grid-template-columns: 1fr 1fr  1fr 1fr 1fr;
 
   gap: 4rem;
 
   padding: 20px 50px;
 
-}.site-footer {
+}
+.tools-cont img{
+width:24px;
+  height:24px;
+}
+.site-footer {
 
   background-color: #4b2e1e; /* deep brown */
 

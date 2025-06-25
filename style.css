@@ -50,7 +50,11 @@ body {
   background-position: center;
 
 }
+.services{
+background: url("output-onlinepngtools (5).png"),
+   linear-gradient(135deg, #856D55, #432416);
 
+}
 .buu{
 
   animation: buu 2s linear  infinite ;

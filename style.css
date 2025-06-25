@@ -1271,8 +1271,7 @@ width:140px;
 .hero {
 
   padding: 3rem 0;
-
-  background:
+background: url("output-onlinepngtools (5).png"),
    linear-gradient(135deg, #856D55, #432416);
 
   background-position:center;

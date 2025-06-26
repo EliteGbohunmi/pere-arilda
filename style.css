@@ -9,7 +9,9 @@
   --beige: #f5f5dc;
 
 }
-
+button a{
+  color:white;
+}
 img {
 
   width: 100%;

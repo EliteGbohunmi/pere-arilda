@@ -1048,7 +1048,7 @@ ScrollReveal().reveal(".col", {
 
   const headlinSplit = new SplitText("#headli", { type: "words" });
 
-  gsap.from(headlinSplit.words, {
+  gsap.from(headlinSplit.lines, {
     scrollTrigger: {
       trigger: "#headli",
       start: "top 80%",

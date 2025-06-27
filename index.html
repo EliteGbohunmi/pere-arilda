@@ -1082,14 +1082,6 @@ ScrollReveal().reveal(".col", {
 
         const split = new SplitText("#headline", { type: "lines,chars" });
 
-
-
-        // Animate lines first
-
-
-
-        // Then animate characters inside those lines
-
         gsap.from(split.chars, {
 
           opacity: 0,
@@ -1140,8 +1132,6 @@ ScrollReveal().reveal(".col", {
 
       ScrollTrigger.matchMedia({
 
-        // Mobile only
-
         "(max-width: 768px)": function () {
 
           const split = new SplitText("#headline", { type: "chars" });
@@ -1173,16 +1163,6 @@ ScrollReveal().reveal(".col", {
             delay: 0.1,
 
           });
-
-        },
-
-
-
-        // (optional) Desktop or other breakpoints
-
-        "(min-width: 769px)": function () {
-
-          // No scroll animation here (or a different one if you want)
 
         },
 

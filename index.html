@@ -126,7 +126,7 @@
 
           <h1 id="headline">
 
-            Making Your Day <span class="col">Easier</span> With <span class="bjk">Structured</span> Support 
+            Making Your Day <span class="col">Easier</span> With <span class="col">Structured</span> Support 
 
           </h1>
 
@@ -1004,11 +1004,8 @@ ScrollReveal().reveal(".col", {
 
 <script>
   gsap.registerPlugin(SplitText, ScrollTrigger);
-
-  // Animate headline based on screen size
   ScrollTrigger.matchMedia({
 
-    // Mobile: animate on scroll
     "(max-width: 767px)": function () {
       const mobileSplit = new SplitText("#headline", { type: "chars" });
 
@@ -1026,8 +1023,6 @@ ScrollReveal().reveal(".col", {
         delay: 0.1
       });
     },
-
-    // Desktop: animate on load
     "(min-width: 768px)": function () {
       window.addEventListener("load", () => {
         const desktopSplit = new SplitText("#headline", { type: "lines,chars" });
@@ -1045,18 +1040,20 @@ ScrollReveal().reveal(".col", {
 
   });
 
-  // Animate #headlin (optional second headline)
-  window.addEventListener("load", () => {
-    const altSplit = new SplitText("#headlin", { type: "words" });
 
-    gsap.from(altSplit.words, {
-      opacity: 0,
-      y: 50,
-      duration: 2,
-      ease: "power3.out",
-      stagger: 0.05
-    });
-  });
+  const headlinSplit = new SplitText("#headlin", { type: "words" });
+
+  gsap.from(headlinSplit.words, {
+    scrollTrigger: {
+      trigger: "#headlin",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1.5,
+    ease: "power3.out",
+    stagger: 0.05
 </script>
 
 

@@ -1004,8 +1004,11 @@ ScrollReveal().reveal(".col", {
 
 <script>
   gsap.registerPlugin(SplitText, ScrollTrigger);
+
+  // Animate #headline based on screen size
   ScrollTrigger.matchMedia({
 
+    // Mobile: animate on scroll
     "(max-width: 767px)": function () {
       const mobileSplit = new SplitText("#headline", { type: "chars" });
 
@@ -1023,6 +1026,8 @@ ScrollReveal().reveal(".col", {
         delay: 0.1
       });
     },
+
+    // Desktop: animate on load
     "(min-width: 768px)": function () {
       window.addEventListener("load", () => {
         const desktopSplit = new SplitText("#headline", { type: "lines,chars" });
@@ -1040,7 +1045,7 @@ ScrollReveal().reveal(".col", {
 
   });
 
-
+  // Animate #headlin on scroll
   const headlinSplit = new SplitText("#headlin", { type: "words" });
 
   gsap.from(headlinSplit.words, {
@@ -1054,7 +1059,9 @@ ScrollReveal().reveal(".col", {
     duration: 1.5,
     ease: "power3.out",
     stagger: 0.05
+  });
 </script>
+
 
 
   

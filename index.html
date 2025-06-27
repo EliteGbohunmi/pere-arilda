@@ -1045,12 +1045,12 @@ ScrollReveal().reveal(".col", {
 
   });
 
-  // Animate #headlin on scroll
-  const headlinSplit = new SplitText("#headlin", { type: "words" });
+
+  const headlinSplit = new SplitText("#headli", { type: "words" });
 
   gsap.from(headlinSplit.words, {
     scrollTrigger: {
-      trigger: "#headlin",
+      trigger: "#headli",
       start: "top 80%",
       toggleActions: "play none none none"
     },

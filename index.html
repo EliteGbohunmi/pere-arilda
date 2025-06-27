@@ -870,72 +870,6 @@
 
   
 
-  <script>
-
-    gsap.registerPlugin(ScrollTrigger);
-
-
-
-    const text = document.getElementById("servicesText");
-
-    const length = text.getComputedTextLength();
-
-
-
-    text.setAttribute("stroke-dasharray", length);
-
-    text.setAttribute("stroke-dashoffset", length);
-
-
-
-    // Draw stroke
-
-    gsap.to(text, {
-
-      strokeDashoffset: 0,
-
-      duration: 1.2,
-
-      ease: "power2.out",
-
-      scrollTrigger: {
-
-        trigger: ".svg-text",
-
-        start: "top 80%",
-
-        toggleActions: "play none none none"
-
-      }
-
-    });
-
-
-
-    // Then fill it
-
-    gsap.to(text, {
-
-      fill: "#fff",
-
-      duration: 0.8,
-
-      delay: 1,
-
-      scrollTrigger: {
-
-        trigger: ".svg-text",
-
-        start: "top 80%",
-
-        toggleActions: "play none none none"
-
-      }
-
-    });
-
-  </script>
-
 
 
 
@@ -1068,108 +1002,62 @@ ScrollReveal().reveal(".col", {
 
 
 
+<script>
+  gsap.registerPlugin(SplitText, ScrollTrigger);
 
+  // Animate headline based on screen size
+  ScrollTrigger.matchMedia({
 
-    <script>
+    // Mobile: animate on scroll
+    "(max-width: 767px)": function () {
+      const mobileSplit = new SplitText("#headline", { type: "chars" });
 
-      window.addEventListener("load", () => {
-
-        gsap.registerPlugin(SplitText);
-
-
-
-        // Split into lines and characters
-
-        const split = new SplitText("#headline", { type: "lines,chars" });
-
-        gsap.from(split.chars, {
-
-          opacity: 0,
-
-          y: 20,
-
-          duration: 0.4,
-
-          ease: "power1.out",
-
-          stagger: 0.01,
-
-          delay: 5,
-
-        });
-
-      });
-
-      window.addEventListener("load", () => {
-
-        gsap.registerPlugin(SplitText);
-
-
-
-        const split = new SplitText("#headlin", { type: "words" });
-
-
-
-        gsap.from(split.words, {
-
-          opacity: 0,
-
-          y: 50,
-
-          duration: 2,
-
-          ease: "power3.out",
-
-          stagger: 0.05,
-
-        });
-
-      });
-
-      gsap.registerPlugin(SplitText, ScrollTrigger);
-
-
-
-      ScrollTrigger.matchMedia({
-
-        "(max-width: 768px)": function () {
-
-          const split = new SplitText("#headline", { type: "chars" });
-
-
-
-          gsap.from(split.chars, {
-
-            scrollTrigger: {
-
-              trigger: "#headline",
-
-              start: "top 80%",
-
-              toggleActions: "play none none none",
-
-            },
-
-            opacity: 0,
-
-            y: 20,
-
-            duration: 0.6,
-
-            ease: "power1.out",
-
-            stagger: 0.01,
-
-            delay: 0.1,
-
-          });
-
+      gsap.from(mobileSplit.chars, {
+        scrollTrigger: {
+          trigger: "#headline",
+          start: "top 80%",
+          toggleActions: "play none none none"
         },
-
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        ease: "power1.out",
+        stagger: 0.01,
+        delay: 0.1
       });
+    },
 
-      gsap.registerPlugin(ScrollTrigger);
+    // Desktop: animate on load
+    "(min-width: 768px)": function () {
+      window.addEventListener("load", () => {
+        const desktopSplit = new SplitText("#headline", { type: "lines,chars" });
 
-      ScrollTrigger.matchMedia({
+        gsap.from(desktopSplit.chars, {
+          opacity: 0,
+          y: 20,
+          duration: 0.4,
+          ease: "power1.out",
+          stagger: 0.01,
+          delay: 0.5
+        });
+      });
+    }
+
+  });
+
+  // Animate #headlin (optional second headline)
+  window.addEventListener("load", () => {
+    const altSplit = new SplitText("#headlin", { type: "words" });
+
+    gsap.from(altSplit.words, {
+      opacity: 0,
+      y: 50,
+      duration: 2,
+      ease: "power3.out",
+      stagger: 0.05
+    });
+  });
+</script>
+
 
   

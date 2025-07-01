@@ -1046,11 +1046,11 @@ ScrollReveal().reveal(".col", {
   });
 
 
-  const headlinSplit = new SplitText("#headli", { type: "words" });
+  const headlinSplit = new SplitText("#headlit", { type: "words" });
 
   gsap.from(headlinSplit.lines, {
     scrollTrigger: {
-      trigger: "#headli",
+      trigger: "#headlit",
       start: "top 80%",
       toggleActions: "play none none none"
     },
@@ -1059,10 +1059,10 @@ ScrollReveal().reveal(".col", {
     duration: 1.5,
     ease: "power3.out",
     stagger: 0.05,
-    delay:3.5;
+    delay:0.5
   });
 </script>
 
-
+  </body>
 
   

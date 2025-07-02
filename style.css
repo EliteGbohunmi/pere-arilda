@@ -43,6 +43,33 @@ body {
  ; 
  background-repeat: repeat-y;
   height: max-content;
+   background-position:center;
+
+}
+.hero {
+
+  padding: 3rem 0;
+background: url("output-onlinepngtools (5).png"),
+   linear-gradient(135deg, #856D55, #432416);
+
+  background-position:center;
+  object-fit:cover;
+  
+
+
+    ;
+
+
+
+}
+
+.hero h1 {
+
+
+
+  color: #fff;
+
+  position: relative;
 
 }
 .services{
@@ -1267,32 +1294,7 @@ width:140px;
 
 }
 
-.hero {
 
-  padding: 3rem 0;
-background: url("output-onlinepngtools (5).png"),
-   linear-gradient(135deg, #856D55, #432416);
-
-  background-position:center;
-  object-fit:cover;
-  
-
-
-    ;
-
-
-
-}
-
-.hero h1 {
-
-
-
-  color: #fff;
-
-  position: relative;
-
-}
 
 @media (max-width: 768px) {
 

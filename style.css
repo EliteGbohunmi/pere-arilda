@@ -35,21 +35,17 @@ img {
 }
 
 body {
-
-  margin: 0;
-
-  padding: 0;
-
   font-family: Arial, sans-serif;
 
   background: url("output-onlinepngtools (5).png"),
    linear-gradient(135deg, #856D55, #432416);
-
+margin:0;
   overflow-x: hidden;
  background-repeat: repeat-y;
-  object-fit: cover;
   height: max-content;
-  background-position: center;
+  background-position: center, center, center;
+  background-size:contain, cover, cover;
+  width:100%;
 
 }
 .services{

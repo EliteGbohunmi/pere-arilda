@@ -40,7 +40,6 @@ section{
 body {
   background-image: url("output-onlinepngtools (5).png"),
    linear-gradient(135deg, #856D55, #432416);
- ; 
  background-repeat: repeat-y;
   height: max-content;
    background-position:center;
@@ -1018,7 +1017,22 @@ border-bottom: 2px solid var(--brown);
   border: 2px solid #f08a5d;
 
 }
+.new_socials{
+display:grid;
+  gap:1.5rem;
+float:right;
+  font-size:20px;
+ color: #F9a825;
+}
+.new_socials i {
+background:beige;
+  padding:5px 7px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
 
+}
 .col{
 
   color: #F9a825;

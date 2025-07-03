@@ -1018,11 +1018,12 @@ border-bottom: 2px solid var(--brown);
 
 }
 .new_socials{
-  gap:1rem;
+  gap:2rem;
 display:flex;
   justify-content:flex-end;
   align-items:flex-end;
-  padding:0 20px;
+  margin:0 30px;
+  padding:10px 0px;
     font-size:20px;
 }
 .new_socials i {

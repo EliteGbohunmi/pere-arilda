@@ -1025,9 +1025,7 @@ border-bottom: 2px solid var(--brown);
 .new_socials i {
 background:beige;
   padding:5px 7px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+ 
   border-radius:50%;
 
 }

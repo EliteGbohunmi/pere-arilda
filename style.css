@@ -1018,9 +1018,7 @@ border-bottom: 2px solid var(--brown);
 
 }
 .new_socials{
-display:grid;
   gap:1.5rem;
-float:right;
   font-size:20px;
  color: #F9a825;
 }

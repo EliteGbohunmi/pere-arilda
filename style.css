@@ -1261,8 +1261,10 @@ width:140px;
       font-size: 0.75rem;
       color: #666;
     }
-
-    .brand-header h2 {
+.brand-logo img{
+      border-radius: 0.5rem;
+}
+.brand-header h2 {
       font-size: 1.8rem;
       color: #2c3e50;
       margin: 0;

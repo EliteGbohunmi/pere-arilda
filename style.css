@@ -1362,14 +1362,14 @@ width:140px;
       content: "✓";
       position: absolute;
       left: 0;
-      color: #27ae60;
+      color:  #F9a825;
       font-weight: bold;
     }
 
     .brand-review {
       background: #ecf0f1;
       padding: 1.2rem 1.5rem;
-      border-left: 4px solid #27ae60;
+      border-left: 4px solid  #F9a825;
       border-radius: 0.5rem;
       display: flex;
       flex-direction: column;

@@ -9,6 +9,10 @@
   --beige: #f5f5dc;
 
 }
+html{
+ scroll-behavior: smooth;
+}
+
 button a{
   color:white;
 }

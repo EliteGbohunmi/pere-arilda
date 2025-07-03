@@ -1446,8 +1446,7 @@ grid-template-columns: 1fr 1fr;
 
 
   }
-
-  .about > #headlit {
+ #headlit {
 
     font-size: 40px;
 

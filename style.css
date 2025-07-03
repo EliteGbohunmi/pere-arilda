@@ -1393,7 +1393,9 @@ width:140px;
       font-size: 0.75rem;
       color: #666;
     }
-
+    .client-image img{
+  border-radius: 50%;
+    }
     .client-details {
       display: flex;
       flex-direction: column;
